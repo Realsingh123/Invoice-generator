@@ -27,7 +27,7 @@ export default function ItemRow({ item, index, onChange, onRemove, errors, onBlu
       <td className="border p-2 w-16">
         <input
           type="number"
-          min="1"
+          min="0"
           value={item.quantity}
           onChange={(e) => onChange(index, "quantity", e.target.value)}
           onBlur={onBlur}
@@ -45,8 +45,8 @@ export default function ItemRow({ item, index, onChange, onRemove, errors, onBlu
       {/* Rate */}
       <td className="border p-2 w-20">
         <input
-          type="digit"
-          // min="0"
+          type="number"
+          min="0"
           value={item.rate}
           onChange={(e) => onChange(index, "rate", e.target.value)}
           onBlur={onBlur}
